@@ -1,1 +1,35 @@
- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Parser</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-100 min-h-screen flex flex-col items-center justify-center p-4">
+    <div class="w-full max-w-md bg-white rounded-lg shadow-lg p-6 flex flex-col items-center">
+        <h1 class="text-2xl font-bold mb-4 text-center">Resume Parser</h1>
+        <form id="uploadForm" class="w-full flex flex-col items-center" enctype="multipart/form-data">
+            <input type="file" id="resumeFile" name="resume" accept=".pdf,.docx" class="mb-4 w-full" required />
+            <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Upload
+                Resume</button>
+        </form>
+        <div id="loading" class="hidden mt-4 flex items-center">
+            <svg class="animate-spin h-5 w-5 text-blue-600 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"></path>
+            </svg>
+            <span>Processing...</span>
+        </div>
+        <div id="result" class="w-full mt-6 hidden">
+            <!-- Parsed results will be injected here -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
