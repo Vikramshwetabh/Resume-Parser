@@ -7,7 +7,15 @@ import (
 	"net/http"
 	"os"
 	"os/exec"
+	"path/filepath"
 )
+
+// Serves static files (frontend) from ../frontend directory
+func staticFileServer() http.Handler {
+	frontendPath := filepath.Join("..", "frontend")
+	fs := http.FileServer(http.Dir(frontendPath))
+	return http.StripPrefix("/", fs)
+}
 
 func uploadHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Access-Control-Allow-Origin", "*")
@@ -67,6 +75,8 @@ func uploadHandler(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	http.HandleFunc("/upload", uploadHandler)
+	http.Handle("/", staticFileServer()) // Serve frontend files
+
 	fmt.Println("Server started at http://localhost:8080")
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
