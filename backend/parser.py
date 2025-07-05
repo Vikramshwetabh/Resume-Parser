@@ -1,13 +1,14 @@
+
 import sys
 import os
 import json
 
 try:
-    from docx import Document
+    from docx import Document #For parsing DOCX files
 except ImportError:
     Document = None
 try:
-    import pdfplumber
+    import pdfplumber # For parsing PDF files
 except ImportError:
     pdfplumber = None
 
