@@ -12,7 +12,7 @@ try:
 except ImportError:
     pdfplumber = None
 
-def extract_text_from_pdf(file_path):
+def extract_text_from_pdf(file_path):# Function to extract text from PDF files
     if not pdfplumber:
         return None, "pdfplumber not installed"
     try:
