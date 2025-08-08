@@ -6,7 +6,7 @@ import (
 	"log"
 	"net/http" //for handling HTTP requests
 	"os"
-	"os/exec"
+	"os/exec" // for executing the Python parser
 	"path/filepath"
 )
 
