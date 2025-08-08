@@ -1,7 +1,7 @@
 package main
 
 import (
-	"fmt"
+	"fmt" //for formatting output
 	"io"
 	"log"
 	"net/http"
