@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt" //for formatting output
-	"io"
+	"io"  //for reading and writing data
 	"log"
 	"net/http" //for handling HTTP requests
 	"os"
