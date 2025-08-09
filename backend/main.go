@@ -17,7 +17,7 @@ func staticFileServer() http.Handler {
 	return http.StripPrefix("/", fs)
 }
 
-func uploadHandler(w http.ResponseWriter, r *http.Request) {
+func uploadHandler(w http.ResponseWriter, r *http.Request) { // Handles file upload and parsing
 	w.Header().Set("Access-Control-Allow-Origin", "*")
 	w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
 	if r.Method != http.MethodPost {
