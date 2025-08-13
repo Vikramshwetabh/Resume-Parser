@@ -14,7 +14,7 @@ except ImportError:
 
 def extract_text_from_pdf(file_path):# Function to extract text from PDF files
     if not pdfplumber:
-        return None, "pdfplumber not installed"
+        return None, "pdfplumber not installed" #return if not not installed
     try:
         text = ""
         with pdfplumber.open(file_path) as pdf:
