@@ -24,7 +24,7 @@ def extract_text_from_pdf(file_path):# Function to extract text from PDF files
     except Exception as e:
         return None, f"Error reading PDF: {str(e)}"
 
-def extract_text_from_docx(file_path):
+def extract_text_from_docx(file_path): # Function to extract text from DOCX files
     if not Document:
         return None, "python-docx not installed"
     try:
