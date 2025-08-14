@@ -1,7 +1,7 @@
 
 import sys # Importing necessary libraries
 import os # For file handling
-import json
+import json # For JSON handling
 
 try:
     from docx import Document #For parsing DOCX files
