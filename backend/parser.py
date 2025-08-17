@@ -33,7 +33,7 @@ def extract_text_from_docx(file_path): # Function to extract text from DOCX file
     except Exception as e:
         return None, f"Error reading DOCX: {str(e)}"
 
-def main():
+def main(): # Main function to handle command line arguments and file parsing
     if len(sys.argv) < 2:
         print(json.dumps({"error": "No file path provided"}))
         sys.exit(1)
