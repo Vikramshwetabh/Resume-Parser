@@ -21,7 +21,7 @@ def extract_text_from_pdf(file_path):# Function to extract text from PDF files
             for page in pdf.pages:
                 text += page.extract_text() or ""
         return text, None
-    except Exception as e:
+    except Exception as e: # Handle exceptions during PDF reading
         return None, f"Error reading PDF: {str(e)}"
 
 def extract_text_from_docx(file_path): # Function to extract text from DOCX files
