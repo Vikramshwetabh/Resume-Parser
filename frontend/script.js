@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Show loading spinner
         loading.classList.remove('hidden');// Hide result div
-        resultDiv.classList.add('hidden');
+        resultDiv.classList.add('hidden'); // Clear previous results
         resultDiv.innerHTML = '';
 
         const formData = new FormData();
