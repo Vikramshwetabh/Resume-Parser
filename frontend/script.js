@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const loading = document.getElementById('loading');
     const resultDiv = document.getElementById('result');
 
-    form.addEventListener('submit', async function (e) {
+    form.addEventListener('submit', async function (e) { // Prevent default form submission
         e.preventDefault(); // Prevent page reload
 
         // Show loading spinner
