@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
         e.preventDefault(); // Prevent page reload
 
         // Show loading spinner
-        loading.classList.remove('hidden');
+        loading.classList.remove('hidden');// Hide result div
         resultDiv.classList.add('hidden');
         resultDiv.innerHTML = '';
 
